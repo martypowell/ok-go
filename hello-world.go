@@ -7,11 +7,11 @@ import (
 )
 
 func main() {
+	const messagePrefix string = "hello world"
 
 	timesToRun :=
 		flag.Int("timesToRun", 1, "Number of times you want to display a message.")
-	const messagePrefix string = "hello world"
-	var message = messagePrefix + " marty in variable, with constant"
+	message := messagePrefix + " marty in variable, with constant"
 
 	flag.Parse()
 
