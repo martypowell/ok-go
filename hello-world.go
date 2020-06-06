@@ -6,11 +6,17 @@ import (
 	"strconv"
 )
 
+type pet struct {
+	animalType string
+	name       string
+	age        int
+}
+
 func main() {
 	const messagePrefix string = "hello world"
 
 	animals := []string{"Dog", "Cat", "Elephant"}
-	petAges := map[string]int{"Bob": 1, "Sparky": 10, "Bailey": 2}
+	pets := []pet{pet{name: "Bob", age: 1, animalType: "dog"}, pet{name: "Grumpy", age: 10, animalType: "cat"}}
 
 	timesToRun :=
 		flag.Int("timesToRun", 1, "Number of times you want to display a message.")
@@ -24,17 +30,17 @@ func main() {
 	}
 
 	logAnimals(animals)
-	logPets(petAges)
+	logPets(pets)
 
 	fmt.Println(getBasicArithmatic(2, 2))
 
 }
 
 // Write a list of animals to the terminal
-func logPets(petAges map[string]int) {
+func logPets(pets []pet) {
 	// Loop through animals
-	for name, age := range petAges {
-		fmt.Println(name + " is " + strconv.Itoa(age) + " years old")
+	for _, pet := range pets {
+		fmt.Println(pet.name + " is a " + strconv.Itoa(pet.age) + " year old " + pet.animalType)
 	}
 }
 
