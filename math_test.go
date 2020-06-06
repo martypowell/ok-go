@@ -27,6 +27,7 @@ func TestGetBasicArithmatic(t *testing.T) {
 			if ansMultiply != test.multiply {
 				t.Errorf("got %d, want %d", ansMultiply, test.multiply)
 			}
+			// TODO: Need to figure out how to compare float64 in test
 			// if ansDivide != test.divide {
 			// 	t.Errorf("got %d, want %d", ansDivide, test.divide)
 			// }
