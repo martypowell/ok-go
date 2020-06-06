@@ -1,5 +1,8 @@
 package main
+
 import "fmt"
+
 func main() {
-    fmt.Println("hello world marty")
+	var message = "hello world marty in variable"
+	fmt.Println(message)
 }
