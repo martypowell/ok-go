@@ -12,6 +12,11 @@ type pet struct {
 	age        int
 }
 
+// Get Pet Age for a given pet
+func (pet *pet) getGreeting() string {
+	return "Hi, my name is " + pet.name + ". I am a " + strconv.Itoa(pet.age) + " year old, " + pet.animalType
+}
+
 func main() {
 	const messagePrefix string = "hello world"
 
@@ -32,7 +37,11 @@ func main() {
 	logAnimals(animals)
 	logPets(pets)
 
+	// Test the multiple return value logic
 	fmt.Println(getBasicArithmatic(2, 2))
+
+	// Test Struct Method
+	fmt.Println(pets[1].getGreeting())
 
 }
 
