@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var message = "hello world marty in variable"
+	const messagePrefix string = "hello world"
+	var message = messagePrefix + " marty in variable, with constant"
+
 	fmt.Println(message)
 }
