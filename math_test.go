@@ -35,13 +35,3 @@ func TestGetBasicArithmatic(t *testing.T) {
 	}
 
 }
-
-// for _, tt := range tests {
-
-//     t.Run(testname, func(t *testing.T) {
-//         ansAdd, ansSub, ansMultiply, ansDivide := getBasicArithmatic(tt.a, tt.b)
-//         if ans != tt.want {
-//             t.Errorf("got %d, want %d", ans, tt.add, tt.sub, tt.multiply, tt.divide)
-//         }
-//     })
-// }
