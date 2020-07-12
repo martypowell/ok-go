@@ -11,6 +11,7 @@ func TestGetBasicArithmetic(t *testing.T) {
 		divide                   float64
 	}{
 		{1, 1, 2, 0, 1, 1},
+		{2, 4, 6, -2, 8, .5},
 	}
 
 	for _, test := range tests {
@@ -27,7 +28,7 @@ func TestGetBasicArithmetic(t *testing.T) {
 			if ansMultiply != test.multiply {
 				t.Errorf("got %d, want %d", ansMultiply, test.multiply)
 			}
-			if ansDivide != float64(68) {
+			if ansDivide != float64(test.divide) {
 				t.Errorf("got %f, want %f", ansDivide, float64(test.divide))
 			}
 		})
