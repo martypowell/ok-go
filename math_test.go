@@ -16,7 +16,7 @@ func TestGetBasicArithmatic(t *testing.T) {
 	for _, test := range tests {
 		testname := fmt.Sprintf("%d,%d", test.a, test.b)
 		t.Run(testname, func(t *testing.T) {
-			ansAdd, ansSub, ansMultiply, _ := getBasicArithmatic(test.a, test.b)
+			ansAdd, ansSub, ansMultiply, _ := getBasicArithmetic(test.a, test.b)
 
 			if ansAdd != test.add {
 				t.Errorf("got %d, want %d", ansAdd, test.add)

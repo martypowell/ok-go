@@ -1,6 +1,6 @@
 package main
 
-func getBasicArithmatic(a int, b int) (int, int, int, float64) {
+func getBasicArithmetic(a int, b int) (int, int, int, float64) {
 	add := a + b
 	subtract := a - b
 	multiply := a * b

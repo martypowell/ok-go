@@ -27,7 +27,7 @@ func main() {
 	logPets(pets)
 
 	// Test the multiple return value logic
-	fmt.Println(getBasicArithmatic(2, 2))
+	fmt.Println(getBasicArithmetic(2, 2))
 
 	// Test Struct Method
 	fmt.Println(pets[1].getGreeting())
