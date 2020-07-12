@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestGetBasicArithmatic(t *testing.T) {
+func TestGetBasicArithmetic(t *testing.T) {
 	var tests = []struct {
 		a, b, add, sub, multiply int
 		divide                   float64
@@ -16,7 +16,7 @@ func TestGetBasicArithmatic(t *testing.T) {
 	for _, test := range tests {
 		testname := fmt.Sprintf("%d,%d", test.a, test.b)
 		t.Run(testname, func(t *testing.T) {
-			ansAdd, ansSub, ansMultiply, _ := getBasicArithmetic(test.a, test.b)
+			ansAdd, ansSub, ansMultiply, ansDivide := getBasicArithmetic(test.a, test.b)
 
 			if ansAdd != test.add {
 				t.Errorf("got %d, want %d", ansAdd, test.add)
@@ -27,10 +27,9 @@ func TestGetBasicArithmatic(t *testing.T) {
 			if ansMultiply != test.multiply {
 				t.Errorf("got %d, want %d", ansMultiply, test.multiply)
 			}
-			// TODO: Need to figure out how to compare float64 in test
-			// if ansDivide != test.divide {
-			// 	t.Errorf("got %d, want %d", ansDivide, test.divide)
-			// }
+			if ansDivide != float64(68) {
+				t.Errorf("got %f, want %f", ansDivide, float64(test.divide))
+			}
 		})
 	}
 
